@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Mansions of Madness</string>
+    <string name="button_Items">Items</string>
+    <string name="button_Health">Status</string>
+
+
+    <string name="heading_PlayerStatus">Status Effects</string>
+
+    <string name="heading_Strength">Strength</string>
+    <string name="heading_Agility">Agility</string>
+    <string name="heading_Lore">Lore</string>
+    <string name="heading_Observation">Observation</string>
+    <string name="heading_Influence">Influence</string>
+    <string name="heading_Will">Will</string>
+
+
 </resources>

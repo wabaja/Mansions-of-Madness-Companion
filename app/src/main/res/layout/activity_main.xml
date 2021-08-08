@@ -6,13 +6,151 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="56dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/diceicon" />
+
+    <Button
+        android:id="@+id/button_Item"
+        android:layout_width="160dp"
+        android:layout_height="46dp"
+        android:onClick="changePage"
+        android:text="@string/button_Items"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_Status"
+        android:layout_width="160dp"
+        android:layout_height="46dp"
+        android:text="@string/button_Health"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/floatingActionButton" />
+
+    <ImageButton
+        android:id="@+id/characterImageButton"
+        android:layout_width="164dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/button_Damage"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:text="Health"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/characterImageButton"
+        app:layout_constraintTop_toTopOf="@+id/characterImageButton" />
+
+    <Button
+        android:id="@+id/button_Sanity"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:text="Sanity"
+        app:layout_constraintBottom_toBottomOf="@+id/characterImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/characterImageButton" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/button_Sanity"
+        app:layout_constraintStart_toStartOf="@+id/heading_PlayerStatus"
+        app:layout_constraintTop_toBottomOf="@+id/heading_PlayerStatus" />
+
+    <TextView
+        android:id="@+id/heading_PlayerStatus"
+        android:layout_width="152dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/heading_PlayerStatus"
+        app:layout_constraintStart_toStartOf="@+id/characterImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/characterImageButton" />
+
+    <TextView
+        android:id="@+id/heading_str"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/heading_Strength"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/heading_agility"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+
+    <TextView
+        android:id="@+id/heading_agility"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/heading_Agility"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/heading_observation"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+
+    <TextView
+        android:id="@+id/heading_observation"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/heading_Observation"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/heading_lore"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+
+    <TextView
+        android:id="@+id/heading_lore"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/heading_Lore"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/heading_influence"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+
+    <TextView
+        android:id="@+id/heading_influence"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/heading_Influence"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/heading_iwill"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+
+    <TextView
+        android:id="@+id/heading_iwill"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="@string/heading_Will"
+        android:textAlignment="viewStart"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_Item"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
