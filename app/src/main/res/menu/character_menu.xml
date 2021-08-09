@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/AC"
+        android:title="Agatha Crane" />
+
+    <item
+        android:id="@+id/PTM"
+        android:title="Min Ti Phan" />
+
+    <item
+        android:id="@+id/PF"
+        android:title="Preston Fairmont" />
+
+    <item
+        android:id="@+id/CS"
+        android:title="Carson Sinclair" />
+
+    <item
+        android:id="@+id/java"
+        android:title="Father Matteo" />
+
+    <item
+        android:id="@+id/RY"
+        android:title="Rita Young" />
+
+    <item
+        android:id="@+id/WY"
+        android:title="William Yorick" />
+
+
+
+</menu>

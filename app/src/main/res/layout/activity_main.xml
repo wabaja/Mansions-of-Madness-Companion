@@ -152,5 +152,59 @@
         app:layout_constraintBottom_toTopOf="@+id/button_Item"
         app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
 
+    <EditText
+        android:id="@+id/value_str"
+        android:layout_width="109dp"
+        android:layout_height="26dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/heading_str" />
+
+    <EditText
+        android:id="@+id/value_agility"
+        android:layout_width="109dp"
+        android:layout_height="26dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/heading_agility" />
+
+    <EditText
+        android:id="@+id/value_lore"
+        android:layout_width="109dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/heading_lore" />
+
+    <EditText
+        android:id="@+id/value_observation"
+        android:layout_width="109dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/heading_observation" />
+
+    <EditText
+        android:id="@+id/value_influence"
+        android:layout_width="109dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/heading_influence" />
+
+    <EditText
+        android:id="@+id/value_will"
+        android:layout_width="109dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/heading_iwill" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
