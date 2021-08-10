@@ -70,9 +70,11 @@
         android:layout_width="349dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/heading_str"
         app:layout_constraintEnd_toEndOf="@+id/button_Sanity"
         app:layout_constraintStart_toStartOf="@+id/heading_PlayerStatus"
         app:layout_constraintTop_toBottomOf="@+id/heading_PlayerStatus" />
@@ -81,10 +83,28 @@
         android:id="@+id/heading_PlayerStatus"
         android:layout_width="152dp"
         android:layout_height="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/heading_PlayerStatus"
+        app:layout_constraintStart_toStartOf="@+id/characterImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/heading_Name" />
+
+    <TextView
+        android:id="@+id/heading_Name"
+        android:layout_width="152dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
         android:text="@string/heading_PlayerStatus"
         app:layout_constraintStart_toStartOf="@+id/characterImageButton"
         app:layout_constraintTop_toBottomOf="@+id/characterImageButton" />
+
+    <TextView
+        android:id="@+id/heading_Bio"
+        android:layout_width="152dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="200dp"
+        android:text="@string/heading_PlayerStatus"
+        app:layout_constraintStart_toStartOf="@+id/characterImageButton"
+        app:layout_constraintTop_toTopOf="@+id/heading_Name" />
 
     <TextView
         android:id="@+id/heading_str"
@@ -152,58 +172,53 @@
         app:layout_constraintBottom_toTopOf="@+id/button_Item"
         app:layout_constraintStart_toStartOf="@+id/editTextTextMultiLine" />
 
-    <EditText
-        android:id="@+id/value_str"
-        android:layout_width="109dp"
-        android:layout_height="26dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+    <TextView
+        android:id="@+id/output_strength"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/output_agility"
         app:layout_constraintTop_toTopOf="@+id/heading_str" />
 
-    <EditText
-        android:id="@+id/value_agility"
-        android:layout_width="109dp"
-        android:layout_height="26dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+    <TextView
+        android:id="@+id/output_agility"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/output_observation"
         app:layout_constraintTop_toTopOf="@+id/heading_agility" />
 
-    <EditText
-        android:id="@+id/value_lore"
-        android:layout_width="109dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
-        app:layout_constraintTop_toTopOf="@+id/heading_lore" />
-
-    <EditText
-        android:id="@+id/value_observation"
-        android:layout_width="109dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+    <TextView
+        android:id="@+id/output_observation"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/output_lore"
         app:layout_constraintTop_toTopOf="@+id/heading_observation" />
 
-    <EditText
-        android:id="@+id/value_influence"
-        android:layout_width="109dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+    <TextView
+        android:id="@+id/output_lore"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/output_influence"
+        app:layout_constraintTop_toTopOf="@+id/heading_lore" />
+
+    <TextView
+        android:id="@+id/output_influence"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/output_will"
         app:layout_constraintTop_toTopOf="@+id/heading_influence" />
 
-    <EditText
-        android:id="@+id/value_will"
-        android:layout_width="109dp"
-        android:layout_height="25dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+    <TextView
+        android:id="@+id/output_will"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/heading_iwill"
         app:layout_constraintTop_toTopOf="@+id/heading_iwill" />
 
 

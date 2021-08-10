@@ -4,16 +4,20 @@ import android.content.Intent;
 
 // Class to store each characters information
 public class characterInfo {
-    String name             = "";
-    String image            = "";
-    String bio              = "";
-    String ability          = "";
+    // Variable declarations
+    String name;
+    String image;
+    String bio;
+    String ability;
 
-    Integer stat_Health     = 0;
-    Integer stat_Sanity     = 0;
-    Integer stat_Strength   = 0;
-    Integer stat_Agility    = 0;
-    Integer stat_Lore       = 0;
-    Integer stat_Influence  = 0;
-    Integer stat_Will       = 0;
+    int stat_Health;
+    int stat_Sanity;
+    int stat_Strength;
+    int stat_Agility;
+    int stat_Lore;
+    int stat_Observation;
+    int stat_Influence;
+    int stat_Will;
 }
+
+
