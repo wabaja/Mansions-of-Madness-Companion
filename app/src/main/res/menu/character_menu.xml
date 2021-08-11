@@ -7,7 +7,7 @@
 
     <item
         android:id="@+id/PTM"
-        android:title="Min Ti Phan" />
+        android:title="Minh Thi Phan" />
 
     <item
         android:id="@+id/PF"
