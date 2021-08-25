@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listLayout"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemName"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:id="@+id/itemType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemName"
+        android:textStyle="italic"
+        />
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemType"
+        android:textStyle="italic"
+        />
+
+    <TextView
+        android:id="@+id/itemDamage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemDescription"
+        android:layout_alignLeft="@+id/itemName"
+        android:textStyle="italic"
+
+        />
+
+    <TextView
+        android:id="@+id/itemDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/itemDescription"
+        android:layout_alignRight="@+id/itemName"
+        android:textStyle="italic"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+Common Item,.18 Derringer,Firearm,-,-,2,-
+Common Item,.38 Revolver,Firearm,-,-,3,-
+Common Item,.45 Automatic,Firearm,-,-,4,-
+Common Item,2x4,Heavy Weapon,Action: You brace the door with the board. Flip this card and place it against a door to your space.,Treat this card a barricade that blocks the door it is placed against. When an investigator picks up this card or moves this card away from the door it blocks flip this card.,2,-
+Horror,Absolute Terror,-,Suffer 1 additional facedown Horror. Then flip this card facedown.,-,-,Resolve Immediately
+Horror,Acalculia,-,Roll 1 fewer die while resolving a Lore test.,-,-,Keep Faceup
+Common Item,Arcane Manuscript,Tome,Roll 1 addition die while resolving a lore test.,-,-,-
+Common Item,Axe,Heavy Weapon,You may suffer 2 facedown horror to convert all the clues to successes while attacking with this card.,-,2,-
+Damage,Back Spasm,-,Drop 1 random Item. Then flip this card facedown.,-,-,Resolve Immediately
+Common Item,Bandages,Equipment,Action: Discard up to 2 facedown damage. Then discard this card.,-,-,-
+Damage,Blow to the head,-,Become Dazed. Then flip this card facedown.,-,-,Resolve Immediately
+Unique Item,Brass Key,Key,-,-,-,-
+Common Item,Brass Knuckles,Equipment,Roll 2 additional dice while attacking unarmed.,-,-,-
+Damage,Broken Arm,-,Keep faceup. If you ever have more than 2 Items drop all but 2 of your Items.,-,-,Keep Faceup
+Damage,Broken Leg,-,If you move more than a single space as part of a move action flip 1 Damage faceup.,-,-,Keep Faceup
+Common Item,Bullseye Lantern,Light Source,Action: Another investigator within range becomes dazed.,-,-,-
+Common Item,Candles,Light Source,You may dicard this card to convert all clues to successes while casting a spell.,-,-,-
+Common Item,Carbine Rifle,Firearm,You cannot attack a monster in your space with this card.,-,5,-
+Unique Item,Circumstantial Evidence,Evidence,-,-,-,-
+Horror,Claustrophobia,-,Whenever you end your turn within range of 2 or fewer spaces suffer 1 facedown Horror.,-,-,Keep Faceup
+Unique Item,Conclusive Evidence,Evidence,-,-,-,-
+Damage,Concussion,-,Discard 1 Clue. Then flip this card facedown.,-,-,Resolve Immediately
+Horror,Cower in Fear,-,Become Stunned. Then discard this card.,-,-,Resolve Immediately
+Common Item,Crowbar,Heavy Weapon,-,-,2,-
+Unique Item,Cult Sigil,Evidence Key,-,-,-,-
+Condition,Dazed,-,You cannot spend Clues to convert dice results or perform additional puzzle steps.,-,-,At the end of your turn discard this card.
+Horror,Dementia,-,Discard 1 Clue. Then flip this card facedown.,-,-,Resolve Immediately
+Damage,Demoralizing Injury,-,Suffer 1 additional facedown Horror. Then flip this card facedown.,-,-,Resolve Immediately
+Damage,Disfigured,-,Roll 1 fewer die when resolving an Influence test.,-,-,Keep Faceup
+Horror,Disoriented,-,Become Dazed. Then flip this card facedown.,-,-,Resolve Immediately
+Unique Item,Duke (dog),Ally,At the start of your turn you may perform a trade action as if you are in any space within range.,-,-,-
+Common Item,Dynamite,Equipment,Action: You light the fuse and toss the explosive. Flip this card and place it in a space within range.,At the end of the investigator phase each investigator in this space or an adjacent space suffers 8 damage and each monster in those spaces suffers 10 damage. Then discard this card.,-,-
+Common Item,Elder Sign Pendant,Equipment,Roll 1 additional die while evading a monster.,-,-,-
+Common Item,Elder Ward,Equipment,Roll 1 additional die while a monster is attacking you.,-,-,-
+Spell,Feed the Mind,-,Action: You or another investigator within range become focused. Then flip this card.,-,-,-
+Common Item,Fire Extinguisher,Heavy Weapon,Action: Discard all fire in your space and adjacent spaces.,-,-,-
+Common Item,Flare Gun,Equipment,Action: Place fire in a space within range. Each monster in that space suffers 2 damage. Then flip this card.,Action: Place fire in a space within range. Each monster in that space suffers 2 damage then discard this card.,-,-
+Horror,Flashback,-,Flip 1 other Horror faceup. Then discard this card.,-,-,Resolve Immediately
+Spell,Flesh Ward,-,Action: You or another investigator within range discard one damage. Then flip this card.,-,-,-
+Unique Item,Flux Stabalizer,Equipment,At the start of your turn move a monster within range up to once space.,-,-,-
+Condition,Focused,-,You may discard this card to convert all clues to successes while resolving a test.,-,-,Discard once used.
+Unique Item,Forensic Evidence,Evidence,-,-,-,-
+Unique Item,Gold Key,Key,-,-,-,-
+Damage,Grievous Injury,-,Suffer 1 additional facedown Damage. Then flip this card facedown.,-,-,Resolve Immediately
+Damage,Grim Resolve,-,Become Focused then flip this card face down.,-,-,Resolve Immediately
+Unique Item,Grotesque Stone,Evidence,-,-,-,-
+Damage,Gut Shot,-,Become Stunned. Then discard this card.,-,-,Resolve Immediately
+Horror,Hallucinations,-,Roll 1 fewer die while resolving an Observation test.,-,-,Keep Faceup
+Unique Item,Handcuffs,Equipment,Action: You attempt to handcuff the suspect (Agility; 2). If you pass flip this card and give it to another investigator in your space.,You cannot spend clues to convert dice results or perform additional puzzle steps. This card cannot be dropped or traded. Action: You attempt to pick the lock (Observation; 2). If you pass you manage to escape your bonds; flip this card. Any investigator in this space can perform this action.,-,-
+Common Item,Holy Cross,Equipment,Roll 1 additional die while resolving a will test.,-,-,-
+Common Item,Holy Water,Equipment,Action: Discard 1 horror and become focused. Then discard this card.,-,-,-
+Horror,Hysteria,-,Flip 1 Damage faceup. Then flip this card facedown.,-,-,Resolve Immediately
+Unique Item,Incriminating Evidence,Evidence,-,-,-,-
+Spell,Instill Bravery,-,Action: You or another investigator within range discard one horror. Then flip this card.,-,-,-
+Damage,Just a Scratch,-,No effect. Discard this card.,-,-,Resolve Immediately
+Common Item,Kerosene Lantern,Light Source,You may discard this card to convert all clues to succeses while attacking unarmed.,-,-,-
+Common Item,King James Bible,Tome,Action: You or another investigator within range may discard one facedown horror.,-,-,-
+Horror,Kleptomania,-,Whenever you end your turn in a space with another investigator take 1 Item at random from another investigator in your space.,-,-,Keep Faceup
+Common Item,Knife,Bladed Weapon,-,-,1,-
+Damage,Lasting Injury,-,No effect. Keep this card faceup.,-,-,Keep Faceup
+Common Item,Lead Pipe,Heavy Weapon,-,-,1,-
+Damage,Light-headed,-,Flip 1 Horror faceup. Then flip this card facedown.,-,-,Resolve Immediately
+Common Item,Lucky Cigarette Case,Equipment,Once per round you may convert a clue to a success.,-,-,-
+Common Item,Lucky Rabbit's Foot,Equipment,Once per round you may reroll 1 die.,-,-,-
+Common Item,Machete,Bladed Weapon,-,-,2,-
+Common Item,Magnifying Glass,Equipment,Roll 1 additional die while resolving an observation test.,-,-,-
+Common Item,Meat Clever,Bladed Weapon,You may suffer 2 facedown horror to convert all clues to successes when attacking with this card.,-,2,-
+Common Item,Medical Textbook,Equipment,Action: You or another investigator within range may discard 1 facedown damage.,-,-,-
+Damage,Minor Injury,-,No additional effect. Flip this card face down.,-,-,Resolve Immediately
+Horror,Minor Shock,-,No additional effect. Flip this card facedown.,-,-,Resolve Immediately
+Unique Item,Missing Link,Evidence,-,-,-,-
+Damage,Muscle Tear,-,Roll 1 fewer die while resolving a Strength test.,-,-,Keep Faceup
+Horror,Nyctophobia,-,Whenever you end your turn in a space with Darkness suffer 1 facedown Horror.,-,-,Keep Faceup
+Unique Item,Oil Lamp,Light Source,-,-,-,-
+Damage,Old Injuries,-,Flip 1 other Damage faceup. Then discard this card.,-,-,Resolve Immediately
+Unique Item,Old Journal,Evidence,-,-,-,-
+Unique Item,Old Keys,Key,-,-,-,-
+Horror,Panic,-,Suffer 1 additional dacedown Damage. Then flip this card facedown.,-,-,Resolve Immediately
+Horror,Paranoia,-,When you end your turn within range of another investigator flip 1 Horror faceup.,-,-,Keep Faceup
+Unique Item,Photographic Evidence,Evidence,-,-,-,-
+Common Item,Pickaxe,Heavy Weapon,-,-,3,-
+Common Item,Pocket Watch,Equipment,You may perform 1 additional puzzle step while attempting a puzzle.,-,-,-
+Unique Item,Puzzle Box,Equipment,-,-,-,-
+Condition,Restrained,-,You cannot move voluntarily.,-,-,At the end of your turn discard this card.
+Unique Item,Ritual Components,Evidence,-,-,-,-
+Common Item,Ritual Dagger,Bladed Weapon,Roll 1 additional die while casting a spell.,-,1,-
+Unique Item,Rope,Equipment,Action: You attempt to restrain the suspect (Strength; 2). If you pass flip this card and give it to another investigator in your space.,You cannot move voluntarily. This card cannot be dropped or trade. Action: You attempt to slip your bonds (Agility; 2). If you pass you manage to escape; flip this card. Any investigator can perform this action.,-,-
+Damage,Ruptured Eardrum,-,Roll 1 fewer die when resolving an Agility test.,-,-,Keep Faceup
+Common Item,Sedatives,Equipment,At the start of your turn you may discard 3 damage and 3 horror. If you do discard this card at the end of your turn.,-,-,-
+Common Item,Shotgun,Firearm,You cannot attack a monster that is more than 1 space away with this card.,-,6,-
+Common Item,Shovel,Heavy Weapon,-,-,1,-
+Horror,Shrieking Fit,-,Become Restrained. Then discard this card.,-,-,Resolve Immediately
+Spell,Shriveling,-,Speaking the arcane words causes boils and burns to appear on your enemy's flesh. Then flip this card.,-,3,-
+Unique Item,Silver Key,Key,-,-,-,-
+Common Item,Sledgehammer,Heavy Weapon,You may suffer 2 facedown damage to convert all clues to successes while attacking with this card.,-,2,-
+Horror,Startled,-,No effect. Discard this card.,-,-,Resolve Immediately
+Horror,Steely Resolve,-,Become Focused. Then flip this card facedown.,-,-,Resolve Immediately
+Damage,Stinging Pain,-,Drop 1 random Items. Then flip this card facedown.,-,-,Resolve Immediately
+Condition,Stunned,-,You cannot perform more than a single action during a turn.,-,-,At the end of your turn discard this card.
+Horror,Sudden Shock,-,Drop 2 random Items. Then flip this card facedown.,-,-,Resolve Immediately
+Common Item,Tommy Gun,Firearm,Once per round you may reroll all of your dice while attacking with this card.,-,4,-
+Common Item,Torch,Heavy Weapon Light Source,When an investigator drops this card place fire in this space.,-,1,-
+Damage,Twisted Ankle,-,Become Restrained. Then discard this card.,-,-,Resolve Immediately
+Common Item,Whiskey,Equipment,Action: Discard up to 2 facedown horror then flip this card.,Broken bottle. Bladed weapon damage 1.,-,-
+Spell,Whither,-,As the spells take effect the victims body whithers and mummifies. Then flip this card.,-,2,-
+Spell,Wrack,-,The words of the incantation cause intense wracking pain to tear at your enemy's body. Then flip this card.,-,5,-
+Common Item,Wrench,Heavy Weapon,-,-,1,-
