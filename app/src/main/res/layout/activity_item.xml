@@ -31,14 +31,26 @@
         app:layout_constraintTop_toTopOf="@+id/search_items"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/itemRecycler"
-        android:layout_width="378dp"
-        android:layout_height="627dp"
-        android:layout_marginTop="20dp"
+    <ListView
+        android:id="@+id/itemListView"
+        android:layout_width="375dp"
+        android:layout_height="607dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_AddItem"
         app:layout_constraintStart_toStartOf="@+id/search_items"
         app:layout_constraintTop_toBottomOf="@+id/search_items" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemRecycler"
+            android:layout_width="378dp"
+            android:layout_height="627dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/button_AddItem"
+            app:layout_constraintStart_toStartOf="@+id/search_items"
+            app:layout_constraintTop_toBottomOf="@+id/search_items" />
+    -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

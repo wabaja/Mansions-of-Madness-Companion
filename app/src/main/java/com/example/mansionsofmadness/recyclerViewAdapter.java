@@ -56,8 +56,6 @@ public class recyclerViewAdapter extends RecyclerView.Adapter<recyclerViewAdapte
         holder.itemDamage.setText(damage);
         holder.itemDuration.setText(duration);
 
-
-
     }
 
     @Override

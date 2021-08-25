@@ -10,10 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MansionsOfMadness">
         <activity
+            android:name=".HealthActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".activity_health"
+            android:exported="true"
+            android:label="@string/title_activity_health"
+            android:parentActivityName=".MainActivity"
+             />
+        <activity
             android:name=".ItemActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"
-            />
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,13 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ItemActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"
-            />
-
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

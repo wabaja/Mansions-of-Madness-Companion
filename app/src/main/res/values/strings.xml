@@ -12,6 +12,9 @@
     <string name="heading_Observation">Observation</string>
     <string name="heading_Influence">Influence</string>
     <string name="heading_Will">Will</string>
+    <string name="title_activity_health">activity_health</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 
 
 </resources>

@@ -303,9 +303,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void changePage(View view) {
-        Intent intent = new Intent(this,ItemActivity.class);
-        startActivity(intent);
+    public void changePageToItems(View view) {
+        Intent itemIntent = new Intent(this,ItemActivity.class);
+        startActivity(itemIntent);
+    }
+
+    public void changePageToHealth(View view) {
+        Intent healthIntent = new Intent(this,HealthActivity.class);
+        startActivity(healthIntent);
     }
 
     public void diceRollerDialog(){
