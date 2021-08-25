@@ -1,8 +1,8 @@
-Agatha Crane,After you resolve a horror check gain 1 Clue.,The Parapsychologist,5,9,2,3,4,5,3,4
-Carson Sinclair,Action: Another investigator within range may perform 1 action. Activate only once per round.,The Butler,8,6,3,2,5,4,4,3
-Father Mateo,Action: Another investigator within range becomes focus. Activate this ability only once per round.,The Priest,6,8,3,3,2,4,4,5
-Minh Thi Phan,One per round you or another investigator within range may reroll 1 die while resolving a test.,The Secretary,7,7,3,4,4,3,4,3
-Preston Fairmont,Once per round when you gain an item you may flip one horror facedown or discard one facedown horror.,The Millionaire,8,6,4,4,3,2,5,3
-Rita Young,You may move 1 additional space as part of a move action.,The Athlete,9,5,5,4,3,3,2,4
-Wendy Adams,You cannot become stunned or restrained.,The Urchin,6,8,3,5,4,3,3,3
-William Yorick,Whenever a monster is defeated gain one clue.,The Grave Digger,7,7,4,3,4,3,3,4
+Agatha Crane,After you resolve a horror check gain 1 Clue.,The Parapsychologist,5,9,2,3,4,5,3,4,agatha_crane
+Carson Sinclair,Action: Another investigator within range may perform 1 action. Activate only once per round.,The Butler,8,6,3,2,5,4,4,3,carsonsinclair
+Father Mateo,Action: Another investigator within range becomes focus. Activate this ability only once per round.,The Priest,6,8,3,3,2,4,4,5,fathermateo
+Minh Thi Phan,One per round you or another investigator within range may reroll 1 die while resolving a test.,The Secretary,7,7,3,4,4,3,4,3,minhthiphan
+Preston Fairmont,Once per round when you gain an item you may flip one horror facedown or discard one facedown horror.,The Millionaire,8,6,4,4,3,2,5,3,prestonfairmont
+Rita Young,You may move 1 additional space as part of a move action.,The Athlete,9,5,5,4,3,3,2,4,ritayoung
+Wendy Adams,You cannot become stunned or restrained.,The Urchin,6,8,3,5,4,3,3,3,wendyadams
+William Yorick,Whenever a monster is defeated gain one clue.,The Grave Digger,7,7,4,3,4,3,3,4,williamyorick

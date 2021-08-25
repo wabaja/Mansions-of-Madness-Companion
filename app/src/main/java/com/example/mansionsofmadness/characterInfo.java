@@ -1,6 +1,7 @@
 package com.example.mansionsofmadness;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 
 // Class to store each characters information
 public class characterInfo {

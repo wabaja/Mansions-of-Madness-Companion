@@ -3,6 +3,7 @@ package com.example.mansionsofmadness;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 characterArray[i].setStat_Lore(Integer.parseInt(token[8]));
                 characterArray[i].setStat_Influence(Integer.parseInt(token[9]));
                 characterArray[i].setStat_Will(Integer.parseInt(token[10]));
+                characterArray[i].setImage(token[11]);
 
                 Log.d("My Activity", "Just added: "+characterArray[i]);
 
@@ -118,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         // Create links to the output boxes
         TextView text_name = (TextView) findViewById(R.id.heading_Name);
         TextView text_bio = (TextView) findViewById(R.id.heading_Bio);
+        TextView textAbility = (TextView) findViewById(R.id.textAbility);
 
         TextView text_strength = (TextView) findViewById(R.id.output_strength);
         TextView text_agility = (TextView) findViewById(R.id.output_agility);
@@ -130,9 +133,20 @@ public class MainActivity extends AppCompatActivity {
         ProgressBar healthProgress = (ProgressBar) findViewById(R.id.healthProgress);
         ProgressBar sanityProgress = (ProgressBar) findViewById(R.id.sanityProgress);
 
+
+        // Set the image
+        imageButton = (ImageButton) findViewById(R.id.characterImageButton);
+
+        Context context = imageButton.getContext();
+        int id = context.getResources().getIdentifier(selectedCharacter.getImage(), "drawable", context.getPackageName());
+        imageButton.setImageResource(id);
+
+        //imageButton.setImageResource(id);
+
         //Write the output values to the boxes
         text_name.setText(MainActivity.selectedCharacter.name);
         text_bio.setText(MainActivity.selectedCharacter.bio);
+        textAbility.setText(MainActivity.selectedCharacter.ability);
 
         text_strength.setText(""+ MainActivity.selectedCharacter.stat_Strength);
         text_agility.setText(""+ MainActivity.selectedCharacter.stat_Agility);
@@ -235,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Initialize the character selector
         // Enables a drop down list from the character portrait
-        imageButton = (ImageButton) findViewById(R.id.characterImageButton);
+        //imageButton = (ImageButton) findViewById(R.id.characterImageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

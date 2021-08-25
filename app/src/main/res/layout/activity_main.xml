@@ -30,7 +30,7 @@
         android:onClick="changePage"
         android:text="@string/button_Items"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/diceRollButton"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDiceDialog"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -40,10 +40,12 @@
         android:text="@string/button_Health"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/diceRollButton" />
+        app:layout_constraintStart_toEndOf="@+id/buttonDiceDialog" />
 
     <ImageButton
         android:id="@+id/characterImageButton"
+        android:scaleType="fitCenter"
+
         android:layout_width="164dp"
         android:layout_height="158dp"
         android:layout_marginStart="30dp"
@@ -84,11 +86,11 @@
 
     <TextView
         android:id="@+id/heading_PlayerStatus"
-        android:textStyle="italic"
         android:layout_width="152dp"
         android:layout_height="25dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:text="@string/heading_PlayerStatus"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="@+id/characterImageButton"
         app:layout_constraintTop_toBottomOf="@+id/heading_Name" />
 
@@ -254,6 +256,16 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textAbility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ability"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/heading_PlayerStatus"
+        app:layout_constraintStart_toStartOf="@+id/heading_Name"
+        app:layout_constraintTop_toBottomOf="@+id/heading_Name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
