@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class HealthActivity extends AppCompatActivity {
 
-    public int player_Health = 0;
-    public int player_Sanity = 0;
+    public static int player_Health = 0;
+    public static int player_Sanity = 0;
 
     public TextView healthOutput, sanityOutput;
     public Button healthUpButton, healthDownButton, sanityUpButton, sanityDownButton;

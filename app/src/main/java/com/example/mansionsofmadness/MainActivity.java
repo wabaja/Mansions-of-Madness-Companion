@@ -309,6 +309,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Update the page after navigating back
+
+    // THIS ISN'T RUNNING, hence the bars don't update
     protected void onResume(Bundle savedInstanceState){
         super.onResume();
 

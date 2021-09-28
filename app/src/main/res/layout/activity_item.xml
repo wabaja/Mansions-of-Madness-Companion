@@ -9,13 +9,13 @@
 
     <AutoCompleteTextView
         android:id="@+id/search_items"
-        android:inputType="textAutoComplete"
-        android:layout_width="309dp"
-        android:layout_height="60dp"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:completionThreshold="1"
         android:hint="Enter an item name..."
+        android:inputType="textAutoComplete"
         android:padding="16dp"
         android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"

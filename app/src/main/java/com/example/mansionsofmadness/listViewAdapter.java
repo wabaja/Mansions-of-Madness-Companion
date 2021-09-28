@@ -68,8 +68,8 @@ public final class listViewAdapter extends ArrayAdapter<itemInfo>{
         if(null == tag || !(tag instanceof ViewHolder)) {
             viewHolder = new ViewHolder();
 
-            viewHolder.nameView = (TextView) workingView.findViewById(R.id.text_CardName);
-            viewHolder.descriptionView = (TextView) workingView.findViewById(R.id.text_CardDescription);
+            //viewHolder.nameView = (TextView) workingView.findViewById(R.id.text_CardName);
+            //viewHolder.descriptionView = (TextView) workingView.findViewById(R.id.text_CardDescription);
             //viewHolder.imageView = (ImageView) workingView.findViewById(R.id.news_entry_icon);
 
             workingView.setTag(viewHolder);

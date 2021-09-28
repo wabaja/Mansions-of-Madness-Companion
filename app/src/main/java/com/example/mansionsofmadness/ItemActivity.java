@@ -48,7 +48,7 @@ public class ItemActivity extends AppCompatActivity {
     public static String[] playerCardNames = new String[20];
     //public static itemInfo[] playerCards = new itemInfo[20];
 
-    public ArrayList<itemInfo> playerCards = new ArrayList<itemInfo>();
+    public static ArrayList<itemInfo> playerCards = new ArrayList<itemInfo>();
 
     public static itemInfo playerCard = new itemInfo();
 
