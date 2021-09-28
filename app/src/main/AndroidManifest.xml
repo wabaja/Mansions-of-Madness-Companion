@@ -11,20 +11,24 @@
         android:theme="@style/Theme.MansionsOfMadness">
         <activity
             android:name=".HealthActivity"
+            android:launchMode="singleTop"
             android:exported="true"
             android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".activity_health"
+            android:launchMode="singleTop"
             android:exported="true"
             android:label="@string/title_activity_health"
             android:parentActivityName=".MainActivity"
              />
         <activity
             android:name=".ItemActivity"
+            android:launchMode="singleTop"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
+            android:launchMode="singleTop"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +38,7 @@
         </activity>
         <activity
             android:name=".ItemActivity"
+            android:launchMode="singleTop"
             android:exported="true"
             android:parentActivityName=".MainActivity" />
     </application>

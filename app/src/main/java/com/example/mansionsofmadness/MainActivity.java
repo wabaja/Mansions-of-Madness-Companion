@@ -44,16 +44,12 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonRollDice, buttonCancel;
    // private FloatingActionButton diceRollButton;
 
-    private ImageButton diceRollButton;
-    private ImageButton imageButton;
-    private ImageButton increaseDice, decreaseDice;
+    private ImageButton diceRollButton, imageButton, increaseDice, decreaseDice;
 
-    private TextView passCount, clueCount, failCount;
-    private TextView diceToRollOutput;
+    private TextView passCount, clueCount, failCount, diceToRollOutput;
 
     public int[] diceResult;
-    public int skillLevel;
-    public int diceDelta;
+    public int skillLevel, diceDelta, playerDamage, playerSanity;
 
 
     // Read the character info from a csv file
@@ -133,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
         ProgressBar healthProgress = (ProgressBar) findViewById(R.id.healthProgress);
         ProgressBar sanityProgress = (ProgressBar) findViewById(R.id.sanityProgress);
 
-
         // Set the image
         imageButton = (ImageButton) findViewById(R.id.characterImageButton);
 
@@ -155,17 +150,26 @@ public class MainActivity extends AppCompatActivity {
         text_observation.setText(""+ MainActivity.selectedCharacter.stat_Observation);
         text_influence.setText(""+ MainActivity.selectedCharacter.stat_Influence);
 
-        //Update the progress bar limits
-        healthProgress.setMax(selectedCharacter.stat_Health);
-        sanityProgress.setMax(selectedCharacter.stat_Sanity);
 
-        ////////////////////////////////////////// REMOVE THESE LINES
-        healthProgress.setProgress(3);
-        sanityProgress.setProgress(2);
 
         //Update the progress bar limits
         healthProgress.setMin(0);
         sanityProgress.setMin(0);
+
+        //Update the progress bar limits
+        healthProgress.setMax(selectedCharacter.stat_Health);
+        sanityProgress.setMax(selectedCharacter.stat_Sanity);
+
+        if(playerDamage == 0){
+            healthProgress.setProgress(selectedCharacter.stat_Health);
+            sanityProgress.setProgress(selectedCharacter.stat_Sanity);
+        }
+
+        else{
+            healthProgress.setProgress(playerDamage);
+            sanityProgress.setProgress(playerSanity);
+        }
+
     }
 
     //Dice roller function
@@ -300,19 +304,39 @@ public class MainActivity extends AppCompatActivity {
                 charPopUpMenu.show();
             }
         });
+
     }
 
 
+    // Update the page after navigating back
+    protected void onResume(Bundle savedInstanceState){
+        super.onResume();
+
+        //Link to progress bars
+        //This copied from charUpdate method, delete if needed
+        ProgressBar healthProgress = (ProgressBar) findViewById(R.id.healthProgress);
+        ProgressBar sanityProgress = (ProgressBar) findViewById(R.id.sanityProgress);
+
+        // Pull the data from the health activity intent
+        Bundle extras = getIntent().getExtras();
+
+        //Update the text views with the transferred data
+        healthProgress.setProgress(extras.getInt("health"));
+        sanityProgress.setProgress(extras.getInt("sanity"));
+
+    }
+
+    // Page switchers
     public void changePageToItems(View view) {
         Intent itemIntent = new Intent(this,ItemActivity.class);
         startActivity(itemIntent);
     }
-
     public void changePageToHealth(View view) {
         Intent healthIntent = new Intent(this,HealthActivity.class);
         startActivity(healthIntent);
     }
 
+    // Open a pop up to roll the dice
     public void diceRollerDialog(){
     dialogBuilder = new AlertDialog.Builder(this);
     final View diceDialog = getLayoutInflater().inflate(R.layout.dice_popup,null);

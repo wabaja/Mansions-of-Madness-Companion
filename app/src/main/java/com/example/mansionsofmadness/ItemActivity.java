@@ -1,8 +1,11 @@
 package com.example.mansionsofmadness;
 
+
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -30,26 +33,32 @@ import java.util.List;
 
 public class ItemActivity extends AppCompatActivity {
 
-
+    //public ArrayList<itemInfo>;
 
     //Create a 115 row array to store all the cards
     public static itemInfo[] itemArray = new itemInfo[115];
 
     //Create an array for all card information
-    public static String[] itemSearchArray = new String[107];
+    //public static String[] itemSearchArray = new String[107];
 
     //Create an array for item cards, and remove damage and horror
     public static String[] itemsOnlyList = new String[66];
 
     //Create an array of the players selected cards
     public static String[] playerCardNames = new String[20];
-    public static itemInfo[] playerCards = new itemInfo[20];
+    //public static itemInfo[] playerCards = new itemInfo[20];
+
+    public ArrayList<itemInfo> playerCards = new ArrayList<itemInfo>();
+
     public static itemInfo playerCard = new itemInfo();
 
     private static int l = 0;
     private static int n = 0;
     private static int o = 0;
     public int m = 0;
+
+    public int cardCounter = 0;
+    public int listCount = 0;
 
     //replacing any old index used for card tracking. far too confusing.
     public int cardNumber;
@@ -132,6 +141,9 @@ public class ItemActivity extends AppCompatActivity {
     //Set up the search bar and button
     private void initSearchBar(){
         /////// Code to run the autocomplete search bar
+
+        //setContentView(R.layout.activity_item);
+
         //Reference the widget
         //AutoCompleteTextView searchBar = findViewById(R.id.search_items);
         searchBar = findViewById(R.id.search_items);
@@ -142,14 +154,22 @@ public class ItemActivity extends AppCompatActivity {
         //Pass the adapter to the text field
         searchBar.setAdapter(itemAdapter);
 
-        //Add items to the list based on click
+        searchBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                in.hideSoftInputFromWindow(view.getApplicationWindowToken(), 0);
+            }
+        });
 
+
+        //Add items to the list based on click
         addItemButton = findViewById(R.id.button_AddItem);
 
         //Interact with the recycler view if the user clicks the plus button
         addItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View activity_item) {
+            public void onClick(View view) {
                 //Behaviour to add a new item to the recycler view
 
                 // Find the card info class based on the user selection
@@ -157,7 +177,7 @@ public class ItemActivity extends AppCompatActivity {
 
                     if(searchBar.getText().toString().equals(itemArray[m].getCardName().intern())){
                         //Add the new card to the player hand array??
-                        playerCards[cardNumber] = itemArray[m];
+                        playerCards.add(itemArray[m]);
 
                         //Add the one card in question to this variable.
                         playerCard = itemArray[m];
@@ -167,8 +187,7 @@ public class ItemActivity extends AppCompatActivity {
                     }
                 }
 
-                updateListView(playerCard);
-
+                updateListView(playerCards);
             }
         });
 
@@ -244,6 +263,13 @@ public class ItemActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        updateListView(playerCards);
+    }
+
     private List<itemInfo> getNewEntries() {
 
         // Let's setup some test data.
@@ -254,19 +280,33 @@ public class ItemActivity extends AppCompatActivity {
         return entries;
     }
 
-    public itemInfo[] updateListView(itemInfo playerCard){
+    public void updateListView(ArrayList<itemInfo> playerCards){
+
 
         //Set up the list view
         final ListView itemListView = findViewById(R.id.itemListView);
+
+        // Standard list view adapter
+        /*
         final listViewAdapter listAdapter = new listViewAdapter(this,R.layout.itemlistlayout);
-
         itemListView.setAdapter(listAdapter);
+         */
 
+        //Array list adapter
+        cardArrayAdapter myArrayAdapter = new cardArrayAdapter(this,playerCards);
+        itemListView.setAdapter(myArrayAdapter);
 
-        listAdapter.add(playerCard);
+        //Refresh the adapter data from the arraylist
+        myArrayAdapter.notifyDataSetChanged();
 
+        //playerCard = playerCards.get(cardCounter);
 
-        return playerCards;
+        //listAdapter.add(playerCard);
+
+        listCount = itemListView.getAdapter().getCount();
+
+        //cardCounter = cardCounter + 1;
+
     }
 
 

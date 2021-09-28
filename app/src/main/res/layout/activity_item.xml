@@ -9,6 +9,7 @@
 
     <AutoCompleteTextView
         android:id="@+id/search_items"
+        android:inputType="textAutoComplete"
         android:layout_width="309dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
