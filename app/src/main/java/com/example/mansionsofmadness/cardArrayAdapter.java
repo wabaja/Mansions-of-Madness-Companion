@@ -45,7 +45,11 @@ public class cardArrayAdapter extends ArrayAdapter<itemInfo> {
         if ((card.getCardName() != null) && (itemNameOutput != null)){
             //Write the data to the output widgets
             itemNameOutput.setText(card.getCardName());
-            itemTypeOutput.setText(card.getCardType());
+
+
+            String typeString;
+            typeString = card.getCardType() + ", " + card.getItemType();
+            itemTypeOutput.setText(typeString);
 
             // Prepare strings
             String combinedDescription;
@@ -67,7 +71,7 @@ public class cardArrayAdapter extends ArrayAdapter<itemInfo> {
             //Prep the duration output text
             String durationString;
             if(card.getDuration().intern() == ""){
-                durationString = "Duration: " + "N/A";
+                durationString = "";
             }
 
             else{

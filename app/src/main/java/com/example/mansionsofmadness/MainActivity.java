@@ -129,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
         ProgressBar healthProgress = (ProgressBar) findViewById(R.id.healthProgress);
         ProgressBar sanityProgress = (ProgressBar) findViewById(R.id.sanityProgress);
 
+        TextView healthProgressMin = (TextView) findViewById(R.id.healthMin);
+        TextView healthProgressMax = (TextView) findViewById(R.id.healthMax);
+        TextView sanityProgressMin = (TextView) findViewById(R.id.sanityMin);
+        TextView sanityProgressMax = (TextView) findViewById(R.id.sanityMax);
+
         // Set the image
         imageButton = (ImageButton) findViewById(R.id.characterImageButton);
 
@@ -156,10 +161,24 @@ public class MainActivity extends AppCompatActivity {
         healthProgress.setMin(0);
         sanityProgress.setMin(0);
 
+        //Update the progress bar labels
+        healthProgressMin.setText("0");
+        sanityProgressMin.setText("0");
+        healthProgressMax.setText(String.valueOf(selectedCharacter.stat_Health));
+        sanityProgressMax.setText(String.valueOf(selectedCharacter.stat_Sanity));
+
         //Update the progress bar limits
         healthProgress.setMax(selectedCharacter.stat_Health);
         sanityProgress.setMax(selectedCharacter.stat_Sanity);
 
+        //Set the progress towards death and insanity
+        healthProgress.setProgress(playerDamage);
+        sanityProgress.setProgress(playerSanity);
+
+//test point for progress bar
+        final int test_max = healthProgress.getMax();
+
+        /*
         if(playerDamage == 0){
             healthProgress.setProgress(selectedCharacter.stat_Health);
             sanityProgress.setProgress(selectedCharacter.stat_Sanity);
@@ -169,6 +188,8 @@ public class MainActivity extends AppCompatActivity {
             healthProgress.setProgress(playerDamage);
             sanityProgress.setProgress(playerSanity);
         }
+         */
+
 
     }
 
@@ -304,13 +325,40 @@ public class MainActivity extends AppCompatActivity {
                 charPopUpMenu.show();
             }
         });
+    }
 
+    // Update the page after navigating back
+    //Over riding the resume functionality to pass in some extra data
+    @Override
+    protected void onNewIntent(Intent newIntent) {
+        if (newIntent != null)
+            setIntent(newIntent);
     }
 
 
-    // Update the page after navigating back
+    // Pull in the data from the Status page on change
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-    // THIS ISN'T RUNNING, hence the bars don't update
+        // Pull the data from the health activity intent
+        Bundle extras = getIntent().getExtras();
+
+        if (extras != null) {
+            //Link to progress bars
+            //This copied from charUpdate method, delete if needed
+            ProgressBar healthProgress = (ProgressBar) findViewById(R.id.healthProgress);
+            ProgressBar sanityProgress = (ProgressBar) findViewById(R.id.sanityProgress);
+
+            //Update the text views with the transferred data
+            healthProgress.setProgress(extras.getInt("health"));
+            sanityProgress.setProgress(extras.getInt("sanity"));
+        }
+
+    }
+
+    /*
+    // pretty sure this is duplicated
     protected void onResume(Bundle savedInstanceState){
         super.onResume();
 
@@ -325,8 +373,10 @@ public class MainActivity extends AppCompatActivity {
         //Update the text views with the transferred data
         healthProgress.setProgress(extras.getInt("health"));
         sanityProgress.setProgress(extras.getInt("sanity"));
-
     }
+
+     */
+
 
     // Page switchers
     public void changePageToItems(View view) {
@@ -372,27 +422,28 @@ public class MainActivity extends AppCompatActivity {
 
             //switch statement to pick the stat value based on choice
             switch (radioID) {
-                case 1:
+                //No idea why index 0 is rolling over, but here we are.
+                case 2131231242:
                     skillLevel = selectedCharacter.stat_Strength;
                     break;
 
-                case 2:
+                case 1:
                     skillLevel = selectedCharacter.stat_Agility;
                     break;
 
-                case 3:
+                case 2:
                     skillLevel = selectedCharacter.stat_Lore;
                     break;
 
-                case 4:
+                case 3:
                     skillLevel = selectedCharacter.stat_Observation;
                     break;
 
-                case 5:
+                case 4:
                     skillLevel = selectedCharacter.stat_Influence;
                     break;
 
-                case 6:
+                case 5:
                     skillLevel = selectedCharacter.stat_Will;
                     break;
             }
@@ -430,6 +481,8 @@ public class MainActivity extends AppCompatActivity {
             int radioID = radioGroup.getCheckedRadioButtonId();
             radioButton = diceDialog.findViewById(radioID);
 
+            /*
+            // Is this duplicated and unnecessary?
             //switch statement to pick the stat value based on choice
             switch (radioID) {
                 case 1:
@@ -457,6 +510,8 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
+
+             */
             int[] outputRoll = new int[4];
 
             outputRoll = diceRoller(skillLevel);

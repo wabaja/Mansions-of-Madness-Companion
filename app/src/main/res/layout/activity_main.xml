@@ -55,24 +55,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
-    <Button
-        android:id="@+id/button_Damage"
-        android:layout_width="157dp"
-        android:layout_height="48dp"
-        android:text="Health"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/characterImageButton"
-        app:layout_constraintTop_toTopOf="@+id/characterImageButton" />
-
-    <Button
-        android:id="@+id/button_Sanity"
-        android:layout_width="155dp"
-        android:layout_height="54dp"
-        android:text="Sanity"
-        app:layout_constraintBottom_toBottomOf="@+id/characterImageButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/characterImageButton" />
-
     <EditText
         android:id="@+id/editTextTextMultiLine"
         android:layout_width="349dp"
@@ -82,7 +64,6 @@
         android:gravity="start|top"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/heading_str"
-        app:layout_constraintEnd_toEndOf="@+id/button_Sanity"
         app:layout_constraintStart_toStartOf="@+id/heading_PlayerStatus" />
 
     <TextView
@@ -236,17 +217,21 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="156dp"
         android:layout_height="16dp"
-        app:layout_constraintStart_toStartOf="@+id/button_Damage"
-        app:layout_constraintTop_toBottomOf="@+id/button_Damage" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/characterImageButton"
+        app:layout_constraintTop_toBottomOf="@+id/healthLabel" />
 
     <ProgressBar
         android:id="@+id/sanityProgress"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="156dp"
         android:layout_height="16dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="@+id/button_Damage"
-        app:layout_constraintTop_toBottomOf="@+id/button_Damage" />
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/characterImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/characterImageButton" />
 
     <ImageButton
         android:id="@+id/buttonDiceDialog"
@@ -268,6 +253,67 @@
         app:layout_constraintBottom_toTopOf="@+id/heading_PlayerStatus"
         app:layout_constraintStart_toStartOf="@+id/heading_Name"
         app:layout_constraintTop_toBottomOf="@+id/heading_Name" />
+
+    <TextView
+        android:id="@+id/healthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Health"
+        app:layout_constraintEnd_toEndOf="@+id/healthProgress"
+        app:layout_constraintStart_toStartOf="@+id/healthProgress"
+        app:layout_constraintTop_toTopOf="@+id/characterImageButton" />
+
+    <TextView
+        android:id="@+id/healthMin"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/healthProgress"
+        app:layout_constraintEnd_toStartOf="@+id/healthProgress"
+        app:layout_constraintTop_toTopOf="@+id/healthProgress" />
+
+    <TextView
+        android:id="@+id/healthMax"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/healthProgress"
+        app:layout_constraintStart_toEndOf="@+id/healthProgress"
+        app:layout_constraintTop_toTopOf="@+id/healthProgress" />
+
+    <TextView
+        android:id="@+id/sanityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Santiy"
+        app:layout_constraintBottom_toTopOf="@+id/sanityProgress"
+        app:layout_constraintEnd_toEndOf="@+id/sanityProgress"
+        app:layout_constraintStart_toStartOf="@+id/sanityProgress" />
+
+    <TextView
+        android:id="@+id/sanityMax"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sanityProgress"
+        app:layout_constraintStart_toEndOf="@+id/sanityProgress"
+        app:layout_constraintTop_toTopOf="@+id/sanityProgress" />
+
+    <TextView
+        android:id="@+id/sanityMin"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sanityProgress"
+        app:layout_constraintEnd_toStartOf="@+id/sanityProgress"
+        app:layout_constraintTop_toTopOf="@+id/sanityProgress" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

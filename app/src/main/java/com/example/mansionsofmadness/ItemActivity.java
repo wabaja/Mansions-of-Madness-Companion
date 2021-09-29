@@ -96,6 +96,7 @@ public class ItemActivity extends AppCompatActivity {
                 itemArray[i].setItemType(token[2]);
                 itemArray[i].setFrontText(token[3]);
                 itemArray[i].setRearText(token[4]);
+                itemArray[i].setDuration(token[5]);
 
 
                 // Create a list of ITEM names for the autocomplete
